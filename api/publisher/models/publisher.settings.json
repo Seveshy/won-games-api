@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "publishers",
   "info": {
-    "name": "category"
+    "name": "publisher"
   },
   "options": {
     "increments": true,
@@ -17,11 +17,11 @@
     },
     "slug": {
       "type": "uid",
-      "required": true,
-      "targetField": "name"
+      "targetField": "name",
+      "required": true
     },
     "games": {
-      "via": "categories",
+      "via": "publisher",
       "collection": "game"
     }
   }
